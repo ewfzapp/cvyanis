@@ -4,30 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV de Yanis Khassam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #eef2f5;
-      color: #2c3e50;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333333;
       margin: 0;
       padding: 20px;
     }
-    
+
     .header {
-      background: linear-gradient(145deg, #6a5acd, #1e90ff);
+      background-color: #ff6600;
       color: white;
       text-align: center;
       padding: 40px 20px;
-      border-radius: 12px;
+      border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
-    
+
     .name {
       font-size: 3.5em;
       font-weight: bold;
       margin: 0;
     }
-    
+
     .age {
       font-size: 1.5em;
       margin: 10px 0;
@@ -36,9 +40,9 @@
     .title {
       font-size: 1.5em;
       margin: 10px 0;
-      font-style: italic;
+      font-weight: 400;
     }
-    
+
     .contact {
       display: flex;
       justify-content: center;
@@ -47,103 +51,95 @@
       margin-top: 15px;
       flex-wrap: wrap;
     }
-    
+
     .contact span {
       display: flex;
       align-items: center;
       font-weight: 500;
     }
-    
+
     .contact i {
       margin-right: 8px;
       font-size: 1.2em;
-      color: #1e90ff;
+      color: #ff6600;
     }
-    
+
     .section {
       background-color: white;
       margin-top: 20px;
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
-    
+
     .section-title {
       font-size: 2em;
-      color: #6a5acd;
+      color: #ff6600;
       margin-bottom: 15px;
-      border-bottom: 2px solid #6a5acd;
+      border-bottom: 2px solid #ff6600;
       padding-bottom: 5px;
     }
-    
+
     .experience {
       margin-bottom: 25px;
     }
-    
+
     .experience-header {
       display: flex;
       justify-content: space-between;
       font-weight: bold;
-      color: #34495e;
+      color: #333333;
     }
-    
+
     .experience-header .date {
       font-size: 0.95em;
       color: #7f8c8d;
     }
-    
+
     ul {
       padding-left: 20px;
       list-style-type: none;
     }
-    
+
     ul li {
       margin: 12px 0;
       position: relative;
       padding-left: 25px;
       line-height: 1.5;
     }
-    
+
     ul li::before {
       content: "✔";
-      color: #6a5acd;
+      color: #ff6600;
       position: absolute;
       left: 0;
       font-size: 1.2em;
     }
-    
-    .skills-grid {
+
+    .formation {
+      margin-bottom: 25px;
+    }
+
+    .formation-header {
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #333333;
     }
-    
-    .skill-category {
-      flex: 1;
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-    
-    .skill-category h4 {
-      color: #6a5acd;
-      margin-bottom: 10px;
-    }
-    
-    .formation .date {
+
+    .formation-header .date {
       font-size: 0.95em;
       color: #7f8c8d;
     }
-    
+
     .atouts {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-    
+
     .atout-tag {
-      background-color: #6a5acd;
+      background-color: #ff6600;
       color: white;
       padding: 8px 12px;
       border-radius: 20px;
@@ -152,27 +148,27 @@
     }
 
     .atout-tag:hover {
-      background-color: #5a4db1;
+      background-color: #e65c00;
     }
-    
+
     .download-button {
-      display: block; /* Pour faire du bouton un élément de bloc */
-      margin: 20px auto; /* Centre le bouton */
+      display: block;
+      margin: 20px auto;
       padding: 10px 20px;
-      background: linear-gradient(90deg, #6a5acd, #1e90ff);
+      background-color: #ff6600;
       color: white;
       text-decoration: none;
       font-size: 1.2em;
-      border-radius: 5px;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background 0.3s;
-      text-align: center; /* Pour centrer le texte à l'intérieur du bouton */
+      transition: background-color 0.3s;
+      text-align: center;
     }
 
     .download-button:hover {
-      background: linear-gradient(90deg, #1e90ff, #6a5acd);
+      background-color: #e65c00;
     }
-    
+
     @media (max-width: 600px) {
       .contact {
         flex-direction: column;
@@ -180,14 +176,13 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
   <div class="header">
     <h1 class="name">Yanis Khassam</h1>
     <div class="age">27 ans</div>
-    <div class="title">Professionnel de santé | Dynamique & Motivé</div>
+    <div class="title">Brancardier | Commercial</div>
     <div class="contact">
       <span><i class="fas fa-envelope"></i><a href="mailto:y.khassam@gmail.com" style="color: white; text-decoration: none;"> y.khassam@gmail.com</a></span>
       <span><i class="fas fa-phone"></i> 06 33 51 43 69</span>
@@ -252,44 +247,36 @@
   </div>
 
   <div class="section">
-    <h2 class="section-title"><i class="fas fa-cogs"></i> Compétences</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-                <h4><i class="fas fa-tools"></i> Compétences Techniques</h4>
-        <ul>
-          <li>Prise en charge des soins aux patients</li>
-          <li>Utilisation des équipements médicaux</li>
-          <li>Connaissance des protocoles médicaux</li>
-          <li>Formation continue en santé</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h4><i class="fas fa-users"></i> Compétences Relationnelles</h4>
-        <ul>
-          <li>Écoute active</li>
-          <li>Empathie</li>
-          <li>Communication claire</li>
-          <li>Travail en équipe</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
     <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formation</h2>
     <div class="formation">
       <div class="formation-header">
-        <span>Bachelor en soins infirmiers</span>
-        <span class="date">Sept. 2015 - Juin 2018</span>
+        <span>FORMATION BRANCARDIER VALIDÉE CROIX ROUGE</span>
+        <span class="date">NOVEMBRE 2021</span>
       </div>
-      <p>Institut de Formation en Soins Infirmiers - Lyon</p>
+      <ul>
+        <li>Formation AFGSU 1</li>
+        <li>Formation gestes d'hygiène</li>
+        <li>Formation en communication</li>
+        <li>Connaissances sur le corps humain</li>
+      </ul>
     </div>
     <div class="formation">
       <div class="formation-header">
-        <span>Certificat en secourisme</span>
-        <span class="date">Janv. 2019</span>
+        <span>BTS NÉGOCIATION DIGITALISATION RELATION CLIENT</span>
+        <span class="date">2017/2019</span>
       </div>
-      <p>Formation aux gestes qui sauvent - Croix-Rouge Française</p>
+      <ul>
+        <li>Apprentissage du métier de commercial</li>
+        <li>Communication commerciale</li>
+        <li>Négociation marketing et comptabilité</li>
+        <li>Analyse et réalisation d'un projet commercial</li>
+      </ul>
+    </div>
+    <div class="formation">
+      <div class="formation-header">
+        <span>BACCALAURÉAT STMG (SCIENCE ET TECHNOLOGIE DU MANAGEMENT ET DE LA GESTION)</span>
+        <span class="date">2016</span>
+      </div>
     </div>
   </div>
 
@@ -304,7 +291,6 @@
   </div>
 
   <a href="https://drive.google.com/file/d/1G8wVgogP7_cUMxdiZH5QK_rx0ZnHO2Ig/view?usp=drive_link" class="download-button" download>Télécharger mon CV</a>
-  
+
 </body>
 </html>
-
