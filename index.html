@@ -4,147 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV de Yanis Khassam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f0f4f8;
-      color: #2c3e50;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 20px;
+      background-color: #f5f5f5;
     }
-    
+
     .header {
-      background: linear-gradient(135deg, #ff7e5f, #feb47b);
-      color: white;
+      background: linear-gradient(to right, #7367F0, #9E95F5);
+      color: #fff;
+      padding: 40px;
       text-align: center;
-      padding: 60px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
-    .name {
-      font-size: 3em;
-      font-weight: bold;
-      margin: 0;
+
+    .header .name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
-    
-    .title {
-      font-size: 1.2em;
-      margin: 10px 0 20px;
+
+    .header .title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 20px;
     }
-    
-    .contact {
+
+    .header .contact {
       display: flex;
       justify-content: center;
       gap: 30px;
-      font-size: 0.9em;
-      margin-top: 20px;
+      font-size: 0.9rem;
     }
-    
-    .contact span {
+
+    .header .contact span {
       display: flex;
       align-items: center;
     }
-    
-    .contact i {
+
+    .header .contact i {
       margin-right: 8px;
-      font-size: 1.2em;
+      font-size: 1.1rem;
     }
-    
+
     .section {
-      background-color: white;
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 12px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      margin: 30px;
     }
-    
+
     .section-title {
-      font-size: 1.5em;
-      color: #ff7e5f;
+      color: #7367F0;
+      font-size: 1.6rem;
+      font-weight: 600;
       margin-bottom: 20px;
     }
-    
+
     .experience {
       margin-bottom: 30px;
     }
-    
+
     .experience-header {
       display: flex;
       justify-content: space-between;
-      font-weight: bold;
-      color: #2c3e50;
+      font-weight: 600;
+      color: #333;
     }
-    
+
     .experience-header .date {
-      font-size: 0.9em;
-      color: #7f8c8d;
+      font-size: 0.9rem;
+      color: #666;
     }
-    
-    ul {
+
+    .section ul {
       padding-left: 20px;
       list-style-type: none;
     }
-    
-    ul li {
+
+    .section ul li {
       margin: 10px 0;
       position: relative;
       padding-left: 20px;
     }
-    
-    ul li::before {
+
+    .section ul li::before {
       content: "✓";
-      color: #ff7e5f;
+      color: #7367F0;
       position: absolute;
       left: 0;
       font-size: 1.2em;
     }
-    
+
     .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
     }
-    
+
     .skill-category {
-      flex: 1;
-      background-color: #f8f9fa;
+      background-color: #f5f5f5;
       padding: 20px;
       border-radius: 8px;
     }
-    
+
     .skill-category h4 {
-      color: #ff7e5f;
+      color: #7367F0;
       margin-bottom: 10px;
     }
-    
+
     .formation .date {
-      font-size: 0.9em;
-      color: #7f8c8d;
+      font-size: 0.9rem;
+      color: #666;
     }
-    
+
     .atouts {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-    
+
     .atout-tag {
-      background-color: #ff7e5f;
-      color: white;
+      background-color: #7367F0;
+      color: #fff;
       padding: 8px 15px;
       border-radius: 20px;
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
-    
+
     @media (max-width: 600px) {
-      .contact {
+      .header .contact {
         flex-direction: column;
         gap: 10px;
       }
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
