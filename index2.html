@@ -4,436 +4,307 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV de Yanis Khassam</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateX(-100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f2f5;
-      color: #2d3436;
-      line-height: 1.6;
+      font-family: 'Roboto', sans-serif;
+      background-color: #eef2f5;
+      color: #2c3e50;
+      margin: 0;
+      padding: 20px;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
+    
     .header {
-      position: relative;
-      background: linear-gradient(-45deg, #8e44ad, #3498db, #2ecc71, #f1c40f);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      border-radius: 20px;
-      padding: 3rem 2rem;
-      margin-bottom: 2rem;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(142, 68, 173, 0.2);
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 1;
+      background: linear-gradient(145deg, #6a5acd, #1e90ff);
       color: white;
-      animation: float 6s ease-in-out infinite;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
-
+    
     .name {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: -1px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      font-size: 3.5em;
+      font-weight: bold;
+      margin: 0;
     }
-
-    .title-wrapper {
-      margin: 1rem 0 2rem 0;
+    
+    .age {
+      font-size: 1.5em;
+      margin: 10px 0;
     }
 
     .title {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
+      font-size: 1.5em;
+      margin: 10px 0;
+      font-style: italic;
     }
-
-    .subtitle {
-      display: flex;
-      gap: 1rem;
-      font-size: 1.2rem;
-      opacity: 0.9;
-      flex-wrap: wrap;
-    }
-
-    .expertise-tag {
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0.5rem;
-      transition: transform 0.3s;
-    }
-
-    .expertise-tag:hover {
-      transform: scale(1.05);
-    }
-
-    .expertise-medical {
-      background: rgba(46, 204, 113, 0.9);
-    }
-
-    .expertise-commercial {
-      background: rgba(52, 152, 219, 0.9);
-    }
-
+    
     .contact {
       display: flex;
-      gap: 2rem;
+      justify-content: center;
+      gap: 25px;
+      font-size: 1em;
+      margin-top: 15px;
       flex-wrap: wrap;
-      font-size: 1.1rem;
     }
-
-    .contact-item {
+    
+    .contact span {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      transition: all 0.3s;
-      padding: 0.5rem 1rem;
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(5px);
+      font-weight: 500;
     }
-
-    .contact-item:hover {
-      transform: translateY(-2px) scale(1.05);
-      background: rgba(255, 255, 255, 0.2);
+    
+    .contact i {
+      margin-right: 8px;
+      font-size: 1.2em;
+      color: #1e90ff;
     }
-
+    
     .section {
-      background: white;
-      border-radius: 20px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
-      animation: slideIn 0.5s ease-out;
+      background-color: white;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
-
-    .section:hover {
-      transform: translateY(-5px);
-    }
-
+    
     .section-title {
-      color: #8e44ad;
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      font-size: 2em;
+      color: #6a5acd;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #6a5acd;
+      padding-bottom: 5px;
     }
-
-    .section-title i {
-      font-size: 1.5rem;
-      animation: float 3s ease-in-out infinite;
-    }
-
+    
     .experience {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border-radius: 15px;
-      background: #f8f9fa;
-      border-left: 4px solid #8e44ad;
-      transition: all 0.3s;
+      margin-bottom: 25px;
     }
-
-    .experience:hover {
-      transform: translateX(10px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
+    
     .experience-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #34495e;
     }
-
-    .experience-title {
-      font-weight: 600;
-      color: #2d3436;
+    
+    .experience-header .date {
+      font-size: 0.95em;
+      color: #7f8c8d;
     }
-
-    .date {
-      color: #8e44ad;
-      font-weight: 500;
-      font-size: 0.9rem;
-      padding: 0.3rem 0.8rem;
-      background: rgba(142, 68, 173, 0.1);
-      border-radius: 12px;
+    
+    ul {
+      padding-left: 20px;
+      list-style-type: none;
     }
-
-    .experience ul {
-      list-style: none;
-    }
-
-    .experience li {
-      margin: 0.5rem 0;
-      padding-left: 1.5rem;
+    
+    ul li {
+      margin: 12px 0;
       position: relative;
-      transition: transform 0.2s;
+      padding-left: 25px;
+      line-height: 1.5;
     }
-
-    .experience li:hover {
-      transform: translateX(5px);
-    }
-
-    .experience li::before {
-      content: "★";
-      color: #8e44ad;
+    
+    ul li::before {
+      content: "✔";
+      color: #6a5acd;
       position: absolute;
       left: 0;
-      font-size: 0.8rem;
+      font-size: 1.2em;
     }
-
+    
     .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .skill-category {
-      background: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 15px;
-      border-top: 4px solid #8e44ad;
-      transition: all 0.3s;
-    }
-
-    .skill-category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .skill-category h4 {
-      color: #8e44ad;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      flex-wrap: wrap;
+      gap: 15px;
     }
-
-    .skill-category ul li {
-      margin: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
+    
+    .skill-category {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-
-    .skill-category ul li::before {
-      content: "→";
-      color: #8e44ad;
-      position: absolute;
-      left: 0;
+    
+    .skill-category h4 {
+      color: #6a5acd;
+      margin-bottom: 10px;
     }
-
+    
+    .formation .date {
+      font-size: 0.95em;
+      color: #7f8c8d;
+    }
+    
     .atouts {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 10px;
     }
-
+    
     .atout-tag {
-      background: linear-gradient(-45deg, #8e44ad, #9b59b6);
-      background-size: 200% 200%;
-      animation: gradientBG 3s ease infinite;
+      background-color: #6a5acd;
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-size: 0.9rem;
-      transition: all 0.3s;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      transition: background-color 0.3s;
     }
 
     .atout-tag:hover {
-      transform: scale(1.1) rotate(3deg);
+      background-color: #5a4db1;
     }
-
+    
     .download-button {
-      display: inline-block;
-      background: linear-gradient(-45deg, #8e44ad, #3498db);
-      background-size: 200% 200%;
-      animation: gradientBG 3s ease infinite;
+      display: block; /* Pour faire du bouton un élément de bloc */
+      margin: 20px auto; /* Centre le bouton */
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #6a5acd, #1e90ff);
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 30px;
       text-decoration: none;
-      font-weight: 500;
-      margin: 2rem 0;
-      transition: all 0.3s;
-      text-align: center;
+      font-size: 1.2em;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+      text-align: center; /* Pour centrer le texte à l'intérieur du bouton */
     }
 
     .download-button:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 5px 15px rgba(142, 68, 173, 0.3);
+      background: linear-gradient(90deg, #1e90ff, #6a5acd);
     }
-
-    @media (max-width: 768px) {
-      .name {
-        font-size: 2.5rem;
-      }
-
+    
+    @media (max-width: 600px) {
       .contact {
         flex-direction: column;
-        gap: 1rem;
-      }
-
-      .experience-header {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .subtitle {
-        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="header-content">
-        <h1 class="name">Yanis Khassam</h1>
-        <div class="title-wrapper">
-          <h2 class="title">Double expertise</h2>
-          <div class="subtitle">
-            <span class="expertise-tag expertise-medical">
-              <i class="fas fa-hospital-user"></i>
-              Professionnel de santé
-            </span>
-            <span class="expertise-tag expertise-commercial">
-              <i class="fas fa-handshake"></i>
-              Expert commercial
-            </span>
-          </div>
-          <p style="margin-top: 1rem; font-size: 1.2rem;">27 ans | Dynamique & Polyvalent</p>
-        </div>
-        <div class="contact">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>y.khassam@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>06 33 51 43 69</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Brignais (69530)</span>
-          </div>
-        </div>
-      </div>
-    </header>
 
-    <section class="section">
-      <h2 class="section-title">
-        <i class="fas fa-briefcase"></i>
-        Parcours Professionnel
-      </h2>
-      
-      <div class="experience">
-        <div class="experience-header">
-          <span class="experience-title">Hôpital Saint Joseph Saint Luc - Lyon</span>
-          <span class="date">Sept. - Nov. 2023</span>
-        </div>
+  <div class="header">
+    <h1 class="name">Yanis Khassam</h1>
+    <div class="age">27 ans</div>
+    <div class="title">Professionnel de santé | Dynamique & Motivé</div>
+    <div class="contact">
+      <span><i class="fas fa-envelope"></i><a href="mailto:y.khassam@gmail.com" style="color: white; text-decoration: none;"> y.khassam@gmail.com</a></span>
+      <span><i class="fas fa-phone"></i> 06 33 51 43 69</span>
+      <span><i class="fas fa-map-marker-alt"></i> Brignais (69530)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title"><i class="fas fa-briefcase"></i> Expériences Professionnelles</h2>
+    
+    <div class="experience">
+      <div class="experience-header">
+        <span>Hôpital Saint Joseph Saint Luc - Lyon</span>
+        <span class="date">Sept. - Nov. 2023</span>
+      </div>
+      <ul>
+        <li>Transport des patients entre différents services avec professionnalisme.</li>
+        <li>Collaboration avec les équipes médicales pour garantir la sécurité des patients.</li>
+        <li>Assistance lors du transfert des patients (fauteuils roulants, brancards).</li>
+        <li>Suivi des protocoles d'hygiène et de sécurité stricts.</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <div class="experience-header">
+        <span>Clinique du Parc - Lyon</span>
+        <span class="date">Fév. 2022 - Juin 2023</span>
+      </div>
+      <ul>
+        <li>Gestion des transferts de patients vers les salles d'opération.</li>
+        <li>Coordination avec les chirurgiens et anesthésistes.</li>
+        <li>Réactivité face aux urgences avec calme et efficacité.</li>
+        <li>Respect strict des protocoles médicaux.</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <div class="experience-header">
+        <span>La Compagnie du Lit</span>
+        <span class="date">Janv. 2020 - Déc. 2021</span>
+      </div>
+      <ul>
+        <li>Gestion des ventes et conseils clients sur les produits de literie.</li>
+        <li>Suivi des commandes et des livraisons.</li>
+        <li>Atteinte et dépassement des objectifs de vente.</li>
+        <li>Établissement de relations solides avec les clients.</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <div class="experience-header">
+        <span>BNP Paribas</span>
+        <span class="date">Juin 2018 - Déc. 2019</span>
+      </div>
+      <ul>
+        <li>Conseiller clientèle en banque, gestion des comptes et des opérations.</li>
+        <li>Analyse des besoins financiers des clients et propositions de produits adaptés.</li>
+        <li>Conduite d'entretiens commerciaux pour fidéliser la clientèle.</li>
+        <li>Atteinte des objectifs de vente et de satisfaction client.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title"><i class="fas fa-cogs"></i> Compétences</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+                <h4><i class="fas fa-tools"></i> Compétences Techniques</h4>
         <ul>
-          <li>Transport des patients entre différents services avec professionnalisme.</li>
-          <li>Collaboration avec les équipes médicales pour garantir la sécurité des patients.</li>
-          <li>Assistance lors du transfert des patients (fauteuils roulants, brancards).</li>
-          <li>Suivi des protocoles d'hygiène et de sécurité stricts.</li>
+          <li>Prise en charge des soins aux patients</li>
+          <li>Utilisation des équipements médicaux</li>
+          <li>Connaissance des protocoles médicaux</li>
+          <li>Formation continue en santé</li>
         </ul>
       </div>
-
-      <div class="experience">
-        <div class="experience-header">
-          <span class="experience-title">Clinique du Parc - Lyon</span>
-          <span class="date">Fév. 2022 - Juin 2023</span>
-        </div>
+      <div class="skill-category">
+        <h4><i class="fas fa-users"></i> Compétences Relationnelles</h4>
         <ul>
-          <li>Gestion des transferts de patients vers les salles d'opération.</li>
-          <li>Coordination avec les chirurgiens et anesthésistes.</li>
-          <li>Réactivité face aux urgences avec calme et efficacité.</li>
-          <li>Respect strict des protocoles médicaux.</li>
+          <li>Écoute active</li>
+          <li>Empathie</li>
+          <li>Communication claire</li>
+          <li>Travail en équipe</li>
         </ul>
       </div>
+    </div>
+  </div>
 
-      <div class="experience">
-        <div class="experience-header">
-          <span class="experience-title">La Compagnie du Lit</span>
-          <span class="date">Janv. 2020 - Déc. 2021</span>
-        </div>
-        <ul>
-          <li>Gestion des ventes et conseils clients sur les produits de literie.</li>
-          <li>Suivi des commandes et des livraisons.</li>
-          <li>Atteinte et dépassement des objectifs de vente.</li>
-          <li>Établissement de relations solides avec les clients.</li>
-        </ul>
+  <div class="section">
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formation</h2>
+    <div class="formation">
+      <div class="formation-header">
+        <span>Bachelor en soins infirmiers</span>
+        <span class="date">Sept. 2015 - Juin 2018</span>
       </div>
-
-      <div class="experience">
-        <div class="experience-header">
-          <span class="experience-title">BNP Paribas</span>
-          <span class="date">Juin 2018 - Déc. 2019</span>
-        </div>
-        <ul>
-          <li>Conseiller clientèle en banque, gestion des comptes et des opérations.</li>
-          <li>Analyse des besoins financiers des clients et propositions de produits adaptés.</li>
-          <li>Conduite d'entretiens commerciaux pour fidéliser la clientèle.</li>
-          <li>Atteinte des objectifs de vente et de satisfaction client.</li>
-        </ul>
+      <p>Institut de Formation en Soins Infirmiers - Lyon</p>
+    </div>
+    <div class="formation">
+      <div class="formation-header">
+        <span>Certificat en secourisme</span>
+        <span class="date">Janv. 2019</span>
       </div>
-    </section>
+      <p>Formation aux gestes qui sauvent - Croix-Rouge Française</p>
+    </div>
+  </div>
 
-    <section class="section">
-      <h2 class="section-title">
-        <i class="fas fa-star"></i>
-        Compétences
-      </h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h4><i class="fas fa-hospital"></i> Expertise Médicale</h4>
-          <ul>
-            <li>Prise en charge des soins aux patients</li>
-            <li>Utilisation des équipements médicaux</li>
-            <li>Connaissance des protocoles médicaux</li>
-            <li>Formation continue en santé</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h4><i class="fas fa-comments-dollar"></i>
+  <div class="section">
+    <h2 class="section-title"><i class="fas fa-star"></i> Atouts</h2>
+    <div class="atouts">
+      <span class="atout-tag">Rigueur</span>
+      <span class="atout-tag">Dynamisme</span>
+      <span class="atout-tag">Adaptabilité</span>
+      <span class="atout-tag">Leadership</span>
+    </div>
+  </div>
+
+  <a href="https://drive.google.com/file/d/1G8wVgogP7_cUMxdiZH5QK_rx0ZnHO2Ig/view?usp=drive_link" class="download-button" download>Télécharger mon CV</a>
+  
+</body>
+</html>
+
