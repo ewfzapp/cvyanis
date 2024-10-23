@@ -4,148 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV de Yanis Khassam</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      background-color: #eef2f5;
+      color: #2c3e50; /* Changement pour un ton légèrement plus sombre */
       margin: 0;
-      background-color: #f5f5f5;
+      padding: 20px;
     }
-
+    
     .header {
-      background: linear-gradient(to right, #7367F0, #9E95F5);
-      color: #fff;
-      padding: 40px;
+      background: linear-gradient(145deg, #6a5acd, #1e90ff); /* Dégradé violet à bleu */
+      color: white;
       text-align: center;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
-
-    .header .name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
+    
+    .name {
+      font-size: 3.5em;
+      font-weight: bold;
+      margin: 0;
     }
-
-    .header .title {
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin-bottom: 20px;
+    
+    .title {
+      font-size: 1.5em;
+      margin: 10px 0;
+      font-style: italic;
     }
-
-    .header .contact {
+    
+    .contact {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      font-size: 0.9rem;
+      gap: 25px;
+      font-size: 1em;
+      margin-top: 15px;
+      flex-wrap: wrap;
     }
-
-    .header .contact span {
+    
+    .contact span {
       display: flex;
       align-items: center;
+      font-weight: 500;
     }
-
-    .header .contact i {
+    
+    .contact i {
       margin-right: 8px;
-      font-size: 1.1rem;
+      font-size: 1.2em;
+      color: #1e90ff; /* Couleur des icônes modifiée */
     }
-
+    
     .section {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      margin: 30px;
+      background-color: white;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
-
+    
     .section-title {
-      color: #7367F0;
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-size: 2em;
+      color: #6a5acd; /* Violet pour le titre de section */
+      margin-bottom: 15px;
+      border-bottom: 2px solid #6a5acd; /* Ligne en bas du titre */
+      padding-bottom: 5px;
     }
-
+    
     .experience {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
-
+    
     .experience-header {
       display: flex;
       justify-content: space-between;
-      font-weight: 600;
-      color: #333;
+      font-weight: bold;
+      color: #34495e;
     }
-
+    
     .experience-header .date {
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.95em;
+      color: #7f8c8d; /* Couleur des dates */
     }
-
-    .section ul {
+    
+    ul {
       padding-left: 20px;
       list-style-type: none;
     }
-
-    .section ul li {
-      margin: 10px 0;
+    
+    ul li {
+      margin: 12px 0;
       position: relative;
-      padding-left: 20px;
+      padding-left: 25px;
+      line-height: 1.5;
     }
-
-    .section ul li::before {
-      content: "✓";
-      color: #7367F0;
+    
+    ul li::before {
+      content: "✔";
+      color: #6a5acd; /* Symbole de coche en violet */
       position: absolute;
       left: 0;
       font-size: 1.2em;
     }
-
+    
     .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
-
+    
     .skill-category {
-      background-color: #f5f5f5;
-      padding: 20px;
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 15px;
       border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-
+    
     .skill-category h4 {
-      color: #7367F0;
+      color: #6a5acd; /* Couleur du titre des compétences */
       margin-bottom: 10px;
     }
-
+    
     .formation .date {
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.95em;
+      color: #7f8c8d; /* Couleur des dates de formation */
     }
-
+    
     .atouts {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-
+    
     .atout-tag {
-      background-color: #7367F0;
-      color: #fff;
-      padding: 8px 15px;
+      background-color: #6a5acd; /* Couleur violet pour les atouts */
+      color: white;
+      padding: 8px 12px;
       border-radius: 20px;
-      font-size: 0.9rem;
+      font-size: 0.95em;
+      transition: background-color 0.3s;
     }
 
+    .atout-tag:hover {
+      background-color: #5a4db1; /* Changement de couleur au survol */
+    }
+    
     @media (max-width: 600px) {
-      .header .contact {
+      .contact {
         flex-direction: column;
         gap: 10px;
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -160,7 +172,7 @@
   </div>
 
   <div class="section">
-    <h2 class="section-title">Expériences Professionnelles</h2>
+    <h2 class="section-title"><i class="fas fa-briefcase"></i> Expériences Professionnelles</h2>
     
     <div class="experience">
       <div class="experience-header">
@@ -216,10 +228,10 @@
   </div>
 
   <div class="section">
-    <h2 class="section-title">Compétences</h2>
+    <h2 class="section-title"><i class="fas fa-cogs"></i> Compétences</h2>
     <div class="skills-grid">
       <div class="skill-category">
-        <h4>Compétences Techniques</h4>
+        <h4><i class="fas fa-tools"></i> Compétences Techniques</h4>
         <ul>
           <li>Transfert sécurisé des patients</li>
           <li>Gestion des urgences</li>
@@ -228,7 +240,7 @@
         </ul>
       </div>
       <div class="skill-category">
-        <h4>Compétences Commerciales</h4>
+        <h4><i class="fas fa-chart-line"></i> Compétences Commerciales</h4>
         <ul>
           <li>Gestion des ventes</li>
           <li>Conseil client</li>
@@ -237,7 +249,7 @@
         </ul>
       </div>
       <div class="skill-category">
-        <h4>Compétences Personnelles</h4>
+        <h4><i class="fas fa-user-friends"></i> Compétences Personnelles</h4>
         <ul>
           <li>Empathie & Écoute</li>
           <li>Réactivité & Sang-froid</li>
@@ -249,7 +261,7 @@
   </div>
 
   <div class="section">
-    <h2 class="section-title">Formation</h2>
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formation</h2>
     <div class="formation">
       <h4>Formation Santé - Croix Rouge</h4>
       <div class="date">2021</div>
@@ -263,7 +275,7 @@
   </div>
 
   <div class="section">
-    <h2 class="section-title">Atouts</h2>
+    <h2 class="section-title"><i class="fas fa-star"></i> Atouts</h2>
     <div class="atouts">
       <span class="atout-tag">Dynamique</span>
       <span class="atout-tag">Sociable</span>
