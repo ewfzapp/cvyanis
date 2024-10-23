@@ -8,32 +8,32 @@
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #eef2f5;
-      color: #2c3e50;
+      color: #2c3e50; /* Changement pour un ton légèrement plus sombre */
       margin: 0;
       padding: 20px;
     }
-
+    
     .header {
-      background: linear-gradient(145deg, #6a5acd, #1e90ff);
+      background: linear-gradient(145deg, #6a5acd, #1e90ff); /* Dégradé violet à bleu */
       color: white;
       text-align: center;
       padding: 40px 20px;
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
-
+    
     .name {
       font-size: 3.5em;
       font-weight: bold;
       margin: 0;
     }
-
+    
     .title {
       font-size: 1.5em;
       margin: 10px 0;
       font-style: italic;
     }
-
+    
     .contact {
       display: flex;
       justify-content: center;
@@ -42,7 +42,19 @@
       margin-top: 15px;
       flex-wrap: wrap;
     }
-
+    
+    .contact span {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+    }
+    
+    .contact i {
+      margin-right: 8px;
+      font-size: 1.2em;
+      color: #1e90ff; /* Couleur des icônes modifiée */
+    }
+    
     .section {
       background-color: white;
       margin-top: 20px;
@@ -50,26 +62,102 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
-
-    #download-pdf {
-      background-color: #1e90ff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
+    
+    .section-title {
+      font-size: 2em;
+      color: #6a5acd; /* Violet pour le titre de section */
+      margin-bottom: 15px;
+      border-bottom: 2px solid #6a5acd; /* Ligne en bas du titre */
+      padding-bottom: 5px;
+    }
+    
+    .experience {
+      margin-bottom: 25px;
+    }
+    
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #34495e;
+    }
+    
+    .experience-header .date {
+      font-size: 0.95em;
+      color: #7f8c8d; /* Couleur des dates */
+    }
+    
+    ul {
+      padding-left: 20px;
+      list-style-type: none;
+    }
+    
+    ul li {
+      margin: 12px 0;
+      position: relative;
+      padding-left: 25px;
+      line-height: 1.5;
+    }
+    
+    ul li::before {
+      content: "✔";
+      color: #6a5acd; /* Symbole de coche en violet */
+      position: absolute;
+      left: 0;
       font-size: 1.2em;
-      cursor: pointer;
+    }
+    
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .skill-category {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 15px;
       border-radius: 8px;
-      margin-top: 20px;
-      display: block;
-      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .skill-category h4 {
+      color: #6a5acd; /* Couleur du titre des compétences */
+      margin-bottom: 10px;
+    }
+    
+    .formation .date {
+      font-size: 0.95em;
+      color: #7f8c8d; /* Couleur des dates de formation */
+    }
+    
+    .atouts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .atout-tag {
+      background-color: #6a5acd; /* Couleur violet pour les atouts */
+      color: white;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      transition: background-color 0.3s;
     }
 
-    #download-pdf:hover {
-      background-color: #6a5acd;
+    .atout-tag:hover {
+      background-color: #5a4db1; /* Changement de couleur au survol */
+    }
+    
+    @media (max-width: 600px) {
+      .contact {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
-  <!-- Inclusion de la bibliothèque jsPDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -77,112 +165,125 @@
     <h1 class="name">Yanis Khassam</h1>
     <div class="title">Professionnel de santé | Dynamique & Motivé</div>
     <div class="contact">
-      <span>Email: y.khassam@gmail.com</span>
-      <span>Téléphone: 06 33 51 43 69</span>
-      <span>Lieu: Brignais (69530)</span>
+      <span><i class="fas fa-envelope"></i> y.khassam@gmail.com</span>
+      <span><i class="fas fa-phone"></i> 06 33 51 43 69</span>
+      <span><i class="fas fa-map-marker-alt"></i> Brignais (69530)</span>
     </div>
   </div>
 
   <div class="section">
-    <h2>Expériences Professionnelles</h2>
-    <p><strong>Hôpital Saint Joseph Saint Luc - Lyon (Sept. - Nov. 2023)</strong></p>
-    <ul>
-      <li>Transport des patients entre différents services avec professionnalisme.</li>
-      <li>Collaboration avec les équipes médicales pour garantir la sécurité des patients.</li>
-    </ul>
+    <h2 class="section-title"><i class="fas fa-briefcase"></i> Expériences Professionnelles</h2>
+    
+    <div class="experience">
+      <div class="experience-header">
+        <span>Hôpital Saint Joseph Saint Luc - Lyon</span>
+        <span class="date">Sept. - Nov. 2023</span>
+      </div>
+      <ul>
+        <li>Transport des patients entre différents services avec professionnalisme.</li>
+        <li>Collaboration avec les équipes médicales pour garantir la sécurité des patients.</li>
+        <li>Assistance lors du transfert des patients (fauteuils roulants, brancards).</li>
+        <li>Suivi des protocoles d'hygiène et de sécurité stricts.</li>
+      </ul>
+    </div>
 
-    <p><strong>Clinique du Parc - Lyon (Fév. 2022 - Juin 2023)</strong></p>
-    <ul>
-      <li>Gestion des transferts de patients vers les salles d'opération.</li>
-      <li>Réactivité face aux urgences avec calme et efficacité.</li>
-    </ul>
+    <div class="experience">
+      <div class="experience-header">
+        <span>Clinique du Parc - Lyon</span>
+        <span class="date">Fév. 2022 - Juin 2023</span>
+      </div>
+      <ul>
+        <li>Gestion des transferts de patients vers les salles d'opération.</li>
+        <li>Coordination avec les chirurgiens et anesthésistes.</li>
+        <li>Réactivité face aux urgences avec calme et efficacité.</li>
+        <li>Respect strict des protocoles médicaux.</li>
+      </ul>
+    </div>
 
-    <p><strong>La Compagnie du Lit (Janv. 2020 - Déc. 2021)</strong></p>
-    <ul>
-      <li>Gestion des ventes et conseils clients sur les produits de literie.</li>
-    </ul>
+    <div class="experience">
+      <div class="experience-header">
+        <span>La Compagnie du Lit</span>
+        <span class="date">Janv. 2020 - Déc. 2021</span>
+      </div>
+      <ul>
+        <li>Gestion des ventes et conseils clients sur les produits de literie.</li>
+        <li>Suivi des commandes et des livraisons.</li>
+        <li>Atteinte et dépassement des objectifs de vente.</li>
+        <li>Établissement de relations solides avec les clients.</li>
+      </ul>
+    </div>
 
-    <p><strong>BNP Paribas (Juin 2018 - Déc. 2019)</strong></p>
-    <ul>
-      <li>Conseiller clientèle en banque, gestion des comptes et des opérations.</li>
-    </ul>
+    <div class="experience">
+      <div class="experience-header">
+        <span>BNP Paribas</span>
+        <span class="date">Juin 2018 - Déc. 2019</span>
+      </div>
+      <ul>
+        <li>Conseiller clientèle en banque, gestion des comptes et des opérations.</li>
+        <li>Analyse des besoins financiers des clients et propositions de produits adaptés.</li>
+        <li>Conduite d'entretiens commerciaux pour fidéliser la clientèle.</li>
+        <li>Atteinte des objectifs de vente et de satisfaction client.</li>
+      </ul>
+    </div>
   </div>
 
-  <!-- Bouton pour télécharger le CV en PDF -->
-  <button id="download-pdf">Télécharger le CV en PDF</button>
+  <div class="section">
+    <h2 class="section-title"><i class="fas fa-cogs"></i> Compétences</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4><i class="fas fa-tools"></i> Compétences Techniques</h4>
+        <ul>
+          <li>Transfert sécurisé des patients</li>
+          <li>Gestion des urgences</li>
+          <li>Assistance au personnel soignant</li>
+          <li>Utilisation d'équipements médicaux</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h4><i class="fas fa-chart-line"></i> Compétences Commerciales</h4>
+        <ul>
+          <li>Gestion des ventes</li>
+          <li>Conseil client</li>
+          <li>Analyse des besoins</li>
+          <li>Fidélisation des clients</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h4><i class="fas fa-user-friends"></i> Compétences Personnelles</h4>
+        <ul>
+          <li>Empathie & Écoute</li>
+          <li>Réactivité & Sang-froid</li>
+          <li>Esprit d'équipe</li>
+          <li>Capacité d'adaptation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  <script>
-    document.getElementById('download-pdf').addEventListener('click', function () {
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF();
-      const margin = 10;
-      let y = 10;
+  <div class="section">
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formation</h2>
+    <div class="formation">
+      <h4>Formation Santé - Croix Rouge</h4>
+      <div class="date">2021</div>
+      <p>AFGSU Niveau 1 | Protocoles sanitaires avancés</p>
+    </div>
+    <div class="formation">
+      <h4>Bac STG</h4>
+      <div class="date">2016</div>
+      <p>Sciences et Technologies de la Gestion - Mention Bien</p>
+    </div>
+  </div>
 
-      // Titre du CV
-      doc.setFontSize(22);
-      doc.text('CV de Yanis Khassam', margin, y);
-      y += 10;
+  <div class="section">
+    <h2 class="section-title"><i class="fas fa-star"></i> Atouts</h2>
+    <div class="atouts">
+      <span class="atout-tag">Dynamique</span>
+      <span class="atout-tag">Sociable</span>
+      <span class="atout-tag">Motivé</span>
+      <span class="atout-tag">Esprit d'équipe</span>
+      <span class="atout-tag">Sens de l'écoute</span>
+    </div>
+  </div>
 
-      // Informations de contact
-      doc.setFontSize(12);
-      doc.text('Professionnel de santé | Dynamique & Motivé', margin, y);
-      y += 10;
-      doc.text('Email: y.khassam@gmail.com', margin, y);
-      y += 10;
-      doc.text('Téléphone: 06 33 51 43 69', margin, y);
-      y += 10;
-      doc.text('Lieu: Brignais (69530)', margin, y);
-      y += 20;
-
-      // Expériences Professionnelles
-      doc.setFontSize(16);
-      doc.text('Expériences Professionnelles', margin, y);
-      y += 10;
-
-      // Ajouter des expériences professionnelles avec gestion des textes longs
-      doc.setFontSize(12);
-      const experiences = [
-        {
-          title: 'Hôpital Saint Joseph Saint Luc - Lyon (Sept. - Nov. 2023)',
-          points: [
-            'Transport des patients entre différents services avec professionnalisme.',
-            'Collaboration avec les équipes médicales pour garantir la sécurité des patients.'
-          ]
-        },
-        {
-          title: 'Clinique du Parc - Lyon (Fév. 2022 - Juin 2023)',
-          points: [
-            'Gestion des transferts de patients vers les salles d\'opération.',
-            'Réactivité face aux urgences avec calme et efficacité.'
-          ]
-        },
-        {
-          title: 'La Compagnie du Lit (Janv. 2020 - Déc. 2021)',
-          points: [
-            'Gestion des ventes et conseils clients sur les produits de literie.'
-          ]
-        },
-        {
-          title: 'BNP Paribas (Juin 2018 - Déc. 2019)',
-          points: [
-            'Conseiller clientèle en banque, gestion des comptes et des opérations.'
-          ]
-        }
-      ];
-
-      experiences.forEach(exp => {
-        doc.text(exp.title, margin, y);
-        y += 10;
-        exp.points.forEach(point => {
-          doc.text(doc.splitTextToSize('- ' + point, 180), margin, y);
-          y += 10;
-        });
-        y += 5; // Ajoute de l'espace entre les expériences
-      });
-
-      // Génère et télécharge le PDF
-      doc.save('cv-yanis-khassam.pdf');
-    });
-  </script>
 </body>
 </html>
