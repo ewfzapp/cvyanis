@@ -28,6 +28,11 @@
       margin: 0;
     }
     
+    .age {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
     .title {
       font-size: 1.5em;
       margin: 10px 0;
@@ -151,8 +156,8 @@
     }
     
     .download-button {
-      display: inline-block;
-      margin: 20px auto;
+      display: block; /* Pour faire du bouton un élément de bloc */
+      margin: 20px auto; /* Centre le bouton */
       padding: 10px 20px;
       background: linear-gradient(90deg, #6a5acd, #1e90ff);
       color: white;
@@ -161,6 +166,7 @@
       border-radius: 5px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: background 0.3s;
+      text-align: center; /* Pour centrer le texte à l'intérieur du bouton */
     }
 
     .download-button:hover {
@@ -180,6 +186,7 @@
 
   <div class="header">
     <h1 class="name">Yanis Khassam</h1>
+    <div class="age">27 ans</div>
     <div class="title">Professionnel de santé | Dynamique & Motivé</div>
     <div class="contact">
       <span><i class="fas fa-envelope"></i> y.khassam@gmail.com</span>
@@ -250,53 +257,45 @@
       <div class="skill-category">
         <h4><i class="fas fa-tools"></i> Compétences Techniques</h4>
         <ul>
-          <li>Transfert sécurisé des patients</li>
-          <li>Gestion des urgences</li>
-          <li>Assistance au personnel soignant</li>
-          <li>Utilisation d'équipements médicaux</li>
+          <li>Prise en charge des soins aux patients</li>
+          <li>Utilisation des équipements médicaux</li>
+          <li>Connaissance des protocoles médicaux</li>
+          <li>Formation continue en santé</li>
         </ul>
       </div>
       <div class="skill-category">
-        <h4><i class="fas fa-chart-line"></i> Compétences Commerciales</h4>
+        <h4><i class="fas fa-user-friends"></i> Compétences Relationnelles</h4>
         <ul>
-          <li>Vente et négociation</li>
-          <li>Gestion de la relation client</li>
-          <li>Stratégies de marketing</li>
-          <li>Analyse de marché</li>
+          <li>Écoute active</li>
+          <li>Empathie</li>
+          <li>Communication claire</li>
+          <li>Travail en équipe</li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formations</h2>
-    
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formation</h2>
     <div class="formation">
-      <h4>Diplôme d'État d'Aide-Soignant</h4>
-      <span class="date">2020 - 2021</span>
-    </div>
-    
-    <div class="formation">
-      <h4>BTS Négociation et Relation Client</h4>
-      <span class="date">2018 - 2020</span>
+      <div class="date">2015 - 2018</div>
+      <span>Diplôme d'État d'Aide-Soignant - École de Santé de Lyon</span>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title"><i class="fas fa-star"></i> Atouts</h2>
+    <h2 class="section-title"><i class="fas fa-check-circle"></i> Atouts</h2>
     <div class="atouts">
-      <span class="atout-tag">Autonome</span>
-      <span class="atout-tag">Rigoureux</span>
       <span class="atout-tag">Dynamique</span>
-      <span class="atout-tag">Polyvalent</span>
-      <span class="atout-tag">Écoute active</span>
+      <span class="atout-tag">Organisé</span>
+      <span class="atout-tag">Sociable</span>
+      <span class="atout-tag">Réactif</span>
+      <span class="atout-tag">Sens de l'écoute</span>
+      <span class="atout-tag">Esprit d'équipe</span>
     </div>
   </div>
 
-  <div style="text-align: center;">
-  <a href="https://drive.google.com/file/d/1G8wVgogP7_cUMxdiZH5QK_rx0ZnHO2Ig/view?usp=drive_link" class="download-button">Télécharger mon CV</a>
-</div>
-
+  <a href="https://drive.google.com/file/d/1G8wVgogP7_cUMxdiZH5QK_rx0ZnHO2Ig/view?usp=drive_link" class="download-button" download>Télécharger mon CV</a>
 
 </body>
 </html>
