@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV de Yanis Khassam</title>
   <style>
+    /* Styles du CV (inchangés) */
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #eef2f5;
@@ -12,7 +13,7 @@
       margin: 0;
       padding: 20px;
     }
-    
+
     .header {
       background: linear-gradient(145deg, #6a5acd, #1e90ff);
       color: white;
@@ -21,19 +22,19 @@
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
-    
+
     .name {
       font-size: 3.5em;
       font-weight: bold;
       margin: 0;
     }
-    
+
     .title {
       font-size: 1.5em;
       margin: 10px 0;
       font-style: italic;
     }
-    
+
     .contact {
       display: flex;
       justify-content: center;
@@ -42,19 +43,19 @@
       margin-top: 15px;
       flex-wrap: wrap;
     }
-    
+
     .contact span {
       display: flex;
       align-items: center;
       font-weight: 500;
     }
-    
+
     .contact i {
       margin-right: 8px;
       font-size: 1.2em;
       color: #1e90ff;
     }
-    
+
     .section {
       background-color: white;
       margin-top: 20px;
@@ -62,7 +63,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
-    
+
     .section-title {
       font-size: 2em;
       color: #6a5acd;
@@ -70,35 +71,35 @@
       border-bottom: 2px solid #6a5acd;
       padding-bottom: 5px;
     }
-    
+
     .experience {
       margin-bottom: 25px;
     }
-    
+
     .experience-header {
       display: flex;
       justify-content: space-between;
       font-weight: bold;
       color: #34495e;
     }
-    
+
     .experience-header .date {
       font-size: 0.95em;
       color: #7f8c8d;
     }
-    
+
     ul {
       padding-left: 20px;
       list-style-type: none;
     }
-    
+
     ul li {
       margin: 12px 0;
       position: relative;
       padding-left: 25px;
       line-height: 1.5;
     }
-    
+
     ul li::before {
       content: "✔";
       color: #6a5acd;
@@ -106,13 +107,13 @@
       left: 0;
       font-size: 1.2em;
     }
-    
+
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
     }
-    
+
     .skill-category {
       flex: 1;
       background-color: #f9f9f9;
@@ -120,23 +121,23 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-    
+
     .skill-category h4 {
       color: #6a5acd;
       margin-bottom: 10px;
     }
-    
+
     .formation .date {
       font-size: 0.95em;
       color: #7f8c8d;
     }
-    
+
     .atouts {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-    
+
     .atout-tag {
       background-color: #6a5acd;
       color: white;
@@ -149,7 +150,7 @@
     .atout-tag:hover {
       background-color: #5a4db1;
     }
-    
+
     @media (max-width: 600px) {
       .contact {
         flex-direction: column;
@@ -259,6 +260,15 @@
         </ul>
       </div>
       <div class="skill-category">
+        <h4><i class="fas fa-users"></i> Compétences Relationnelles</h4>
+        <ul>
+          <li>Écoute active</li>
+          <li>Travail en équipe</li>
+          <li>Réactivité</li>
+          <li>Gestion des situations de stress</li>
+        </ul>
+      </div>
+      <div class="skill-category">
         <h4><i class="fas fa-chart-line"></i> Compétences Commerciales</h4>
         <ul>
           <li>Gestion de la relation client</li>
@@ -276,29 +286,45 @@
     document.getElementById('download-pdf').addEventListener('click', function () {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
+      const margin = 10;
+      let y = 10;
 
       // Titre du CV
       doc.setFontSize(22);
-      doc.text('CV de Yanis Khassam', 10, 10);
+      doc.text('CV de Yanis Khassam', margin, y);
+      y += 10;
 
       // Informations de contact
       doc.setFontSize(12);
-      doc.text('Professionnel de santé | Dynamique & Motivé', 10, 20);
-      doc.text('Email: y.khassam@gmail.com', 10, 30);
-      doc.text('Téléphone: 06 33 51 43 69', 10, 40);
-      doc.text('Lieu: Brignais (69530)', 10, 50);
+      doc.text('Professionnel de santé | Dynamique & Motivé', margin, y);
+      y += 10;
+      doc.text('Email: y.khassam@gmail.com', margin, y);
+      y += 10;
+      doc.text('Téléphone: 06 33 51 43 69', margin, y);
+      y += 10;
+      doc.text('Lieu: Brignais (69530)', margin, y);
+      y += 20;
 
       // Section Expériences professionnelles
       doc.setFontSize(16);
-      doc.text('Expériences Professionnelles', 10, 60);
+      doc.text('Expériences Professionnelles', margin, y);
+      y += 10;
 
       // Exemple d'expérience
       doc.setFontSize(12);
-      doc.text('Hôpital Saint Joseph Saint Luc - Lyon (Sept. - Nov. 2023)', 10, 70);
-      doc.text('- Transport des patients entre différents services.', 10, 80);
-      doc.text('- Collaboration avec les équipes médicales.', 10, 90);
+      doc.text('Hôpital Saint Joseph Saint Luc - Lyon (Sept. - Nov. 2023)', margin, y);
+      y += 10;
+      doc.text('- Transport des patients entre différents services avec professionnalisme.', margin, y);
+      y += 10;
+      doc.text('- Collaboration avec les équipes médicales pour garantir la sécurité des patients.', margin, y);
+      y += 10;
 
       // Ajoute plus d'expériences ici...
+      doc.text('Clinique du Parc - Lyon (Fév. 2022 - Juin 2023)', margin, y);
+      y += 10;
+      doc.text('- Gestion des transferts de patients vers les salles d\'opération.', margin, y);
+      y += 10;
+      doc.text('- Réactivité face aux urgences avec calme et efficacité.', margin, y);
 
       // Génère et télécharge le PDF
       doc.save('cv-yanis-khassam.pdf');
